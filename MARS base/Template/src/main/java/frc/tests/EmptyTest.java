@@ -7,15 +7,18 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 
 
-
-
 @MARSTest(name = "NONE")
 public class EmptyTest extends TestRoutine{
-    public EmptyTest() {}
+    private Mechanism mechanism;
+    public EmptyTest(Mechanism mechanism) {
+        this.mechanism = mechanism;
+    }
 
     @Override
     public Command getRoutineCommand(){
-        return Commands.none();
+        return Commands.sequence(
+            Commands.print("No test routine configured")
+        );
     }
 }
 

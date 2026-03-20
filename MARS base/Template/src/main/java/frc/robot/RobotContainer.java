@@ -11,12 +11,15 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import frc.tests.EmptyTest;
 
+
+/* This class manages all the mechanisms to control the Robot */
 public class RobotContainer implements IRobotContainer{
 
   public RobotContainer() {}
 
   @Override
   public void updateNodes() {}
+
 
   public Command getAutonomousCommand() {
     return Commands.print("No autonomous command configured");
