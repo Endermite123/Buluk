@@ -15,3 +15,38 @@ theme:
         name: Switch to light mode
 
   name: material
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: "Getting started/MARS Overview.md"
+  - Getting Started: 
+    - Creating a project: "Getting started/How to create a project?.md"
+    - Libraries: "Getting started/Libraries.md"
+    - APIS: "Getting started/APIS.md"
+  - Robot base:
+    - Manifest: "Robot-base/Manifest.md"
+    - Superstructure:
+      - Superstructure: "Robot-base/Superstructure/Superstructure.md"
+      - Superstructure IO: "Robot-base/Superstructure/Superstructure IO.md"
+      - Superstructure Data: "Robot-base/Superstructure/Superstructure Data.md"
+    - Bindings: 
+      - Controller map: "Robot-base/Bindings/Controller map.md"
+      - Operator & Driver bindings: "Robot-base/Bindings/Operator and Driver Bindings.md"
+      - Auto bindings: "Robot-base/Bindings/Auto Bindings.md"
+      - Test bindings: "Robot-base/Bindings/Test Bindings.md"
+    - Key manager: "Robot-base/Key-manager.md"
+  - Mechanisms: 
+    - Mechanism creation: "Mechanisms/NewModule.md"
+    - Mechanism file: "Mechanisms/Mechanism.md"
+    - Mechanism code: "Mechanisms/Mechanism code.md"
+    - Mechanism IO: "Mechanisms/Mechanism IO.md"
+    - Mechanism requests: "Mechanisms/Mechanism request.md"
+    - Mechanism request factory: "Mechanisms/MechanismRequestFactory.md"
+    - Mechanism IO motor: "Mechanisms/Mechanism Motor.md"
+    - Mechanism simulation: "Mechanisms/Mechanism Simulation.md"
+    - Mechanism test: "Mechanisms/Mechanism Test.md"
+  

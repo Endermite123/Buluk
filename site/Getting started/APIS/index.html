@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/MARSDocs/Tests%20logic/Test%20commands/">
+        <link rel="canonical" href="https://mydomain.org/MARSDocs/Getting%20started/APIS/">
       
       
+        <link rel="prev" href="../Libraries/">
+      
+      
+        <link rel="next" href="../../MARS_Preview/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Test commands - MARS Documentation</title>
+        <title>APIS - MARS Documentation</title>
       
     
     
@@ -71,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#test-commands" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Test commands
+              APIS
             
           </span>
         </div>
@@ -230,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Getting%20started/MARS%20Overview/" class="md-nav__link">
+      <a href="../MARS%20Overview/" class="md-nav__link">
         
   
   
@@ -254,18 +253,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -286,7 +287,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -304,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Getting%20started/How%20to%20create%20a%20project%3F/" class="md-nav__link">
+      <a href="../How%20to%20create%20a%20project%3F/" class="md-nav__link">
         
   
   
@@ -332,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Getting%20started/Libraries/" class="md-nav__link">
+      <a href="../Libraries/" class="md-nav__link">
         
   
   
@@ -357,10 +358,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Getting%20started/APIS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -376,6 +384,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1071,60 +1080,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sequence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        sequence()
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        run ()
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#waitfor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        waitFor()
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delay" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        delay()
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1141,15 +1096,9 @@
 
 
 
-<h1 id="test-commands">Test commands</h1>
-<h2 id="sequence">sequence()</h2>
-<p>The <code>sequence()</code> method is used to create a sequence of commands that will be executed in order. </p>
-<h2 id="run">run ()</h2>
-<p>The <code>run()</code> method is used to execute a command or a sequence of commands when the test case is selected in the driver station. It should return a command that will be executed.</p>
-<h2 id="waitfor">waitFor()</h2>
-<p>The <code>waitFor()</code> method is used to create a command that will wait for a certain condition to be met before proceeding to the next command in the sequence. It takes a lambda function as a parameter that defines the condition to be met. For example, <code>waitFor(() -&gt; mechanism.isAtPosition())</code> will create a command that waits until the mechanism is at a certain position before proceeding to the next command in the sequence.</p>
-<h2 id="delay">delay()</h2>
-<p>The <code>delay()</code> method is used to create a command that will wait for a certain amount of time before proceeding to the next command in the sequence. It takes a parameter that specifies in seconds the amount of time to wait in seconds. For example, <code>delay(2)</code> will create a command that waits for 2 seconds before proceeding to the next command in the sequence.</p>
+  <h1>APIS</h1>
+
+
 
 
 

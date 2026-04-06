@@ -1,0 +1,4173 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/MARSDocs/MARS_Preview/">
+      
+      
+        <link rel="prev" href="../Getting%20started/APIS/">
+      
+      
+        <link rel="next" href="../Mechanisms/Mechanism/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Temporary file - MARS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#marsiano-analisis-tecnico-del-proyecto" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MARS Documentation" class="md-header__button md-logo" aria-label="MARS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MARS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Temporary file
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MARS Documentation" class="md-nav__button md-logo" aria-label="MARS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MARS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting%20started/MARS%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting%20started/How%20to%20create%20a%20project%3F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting%20started/Libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Libraries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting%20started/APIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temporary file
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temporary file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-puede-hacer-el-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que puede hacer el robot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-actual-del-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado actual del hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tecnologias-y-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnologías y Dependencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tecnologías y Dependencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#librerias-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Librerías principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-del-mars-marketplace-instaladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features del MARS Marketplace instaladas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controladores-de-motor-por-subsistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controladores de motor por subsistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-de-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura de Directorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Estructura de Directorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esta-separacion-importa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué esta separación importa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-flujo-de-inicio-main-robot-robotcontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Flujo de Inicio: Main → Robot → RobotContainer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Flujo de Inicio: Main → Robot → RobotContainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robotjava-el-director-de-orquesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot.java — el director de orquesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-por-modo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ciclo de vida por modo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotcontainerjava-la-fabrica-del-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RobotContainer.java — la fábrica del robot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-el-manifest-y-los-feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. El Manifest y los Feature Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. El Manifest y los Feature Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-patron-injector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El patrón Injector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#builders-con-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Builders con dependencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-el-patron-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. El Patrón IO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. El Patrón IO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-interfaz-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La interfaz IO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-implementacion-real-sparkmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La implementación real (SparkMax)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-clase-del-subsistema-turret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La clase del subsistema (Turret)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-el-patron-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. El Patrón Request
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. El Patrón Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-turretrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de TurretRequest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-usa-un-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se usa un Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bindings-de-controladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Bindings de Controladores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Bindings de Controladores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#driverbindings-conducir-el-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DriverBindings — conducir el robot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatorbindings-operar-los-mecanismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OperatorBindings — operar los mecanismos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-del-mapa-de-controles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen del mapa de controles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-modulos-individuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Módulos Individuales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Módulos Individuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turret-torreta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turret (Torreta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-brazo-hood" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arm (Brazo / Hood)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flywheels-ruedas-voladoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FlyWheels (Ruedas voladoras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#climber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Climber
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-la-superstructure-compositesubsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. La Superstructure — CompositeSubsystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. La Superstructure — CompositeSubsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-compuestos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos compuestos principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-sistema-de-autonomia-pathplanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Sistema de Autonomia (PathPlanner)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Sistema de Autonomia (PathPlanner)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rutas-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rutas disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-nombrados-registrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos nombrados registrados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-telemetria-y-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Telemetria y Visualizacion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Telemetria y Visualizacion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema-de-telemetria-por-modulo-turrettelemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema de Telemetria por modulo (TurretTelemetry)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-de-advantagescope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de AdvantageScope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segnales-tunable-y-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segnales Tunable y Signal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claves-de-networktables-keymanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves de NetworkTables (KeyManager)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-diagnosticos-y-codigos-de-estado-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Diagnosticos y Codigos de Estado LED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Diagnosticos y Codigos de Estado LED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-statuscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de un StatusCode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-codigos-de-todos-los-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de codigos de todos los modulos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-features-instaladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Features Instaladas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Features Instaladas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-activas-en-marsiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features activas en MARSIANO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funcionan-los-annotation-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funcionan los annotation processors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-instalar-una-nueva-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como instalar una nueva feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanisms creation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mechanisms creation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mechanisms/Mechanism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanism creation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mechanisms/Mechanism%20IO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanism IO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mechanisms/Mechanism%20request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanism requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mechanisms/Mechanism%20Motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanism motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mechanisms/Mechanism%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanism simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mechanisms/Mechanism%20Test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanism test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robot base
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Robot base
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Manifest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manifest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Superstructure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Superstructure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Superstructure/Superstructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Superstructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Superstructure/Superstructure%20IO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Superstructure IO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Superstructure/Superstructure%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Superstructure Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bindings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bindings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Bindings/Controller%20map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controller map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Bindings/Operator%20and%20Driver%20Bindings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operator & Driver bindings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Bindings/Auto%20Bindings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto bindings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Bindings/Test%20Bindings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test bindings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robot-base/Key-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-puede-hacer-el-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que puede hacer el robot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-actual-del-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado actual del hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tecnologias-y-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnologías y Dependencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tecnologías y Dependencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#librerias-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Librerías principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-del-mars-marketplace-instaladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features del MARS Marketplace instaladas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controladores-de-motor-por-subsistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controladores de motor por subsistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-de-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura de Directorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Estructura de Directorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esta-separacion-importa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué esta separación importa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-flujo-de-inicio-main-robot-robotcontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Flujo de Inicio: Main → Robot → RobotContainer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Flujo de Inicio: Main → Robot → RobotContainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robotjava-el-director-de-orquesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot.java — el director de orquesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-por-modo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ciclo de vida por modo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotcontainerjava-la-fabrica-del-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RobotContainer.java — la fábrica del robot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-el-manifest-y-los-feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. El Manifest y los Feature Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. El Manifest y los Feature Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-patron-injector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El patrón Injector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#builders-con-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Builders con dependencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-el-patron-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. El Patrón IO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. El Patrón IO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-interfaz-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La interfaz IO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-implementacion-real-sparkmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La implementación real (SparkMax)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-clase-del-subsistema-turret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La clase del subsistema (Turret)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-el-patron-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. El Patrón Request
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. El Patrón Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-turretrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de TurretRequest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-usa-un-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se usa un Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bindings-de-controladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Bindings de Controladores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Bindings de Controladores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#driverbindings-conducir-el-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DriverBindings — conducir el robot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatorbindings-operar-los-mecanismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OperatorBindings — operar los mecanismos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-del-mapa-de-controles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen del mapa de controles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-modulos-individuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Módulos Individuales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Módulos Individuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turret-torreta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turret (Torreta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arm-brazo-hood" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arm (Brazo / Hood)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flywheels-ruedas-voladoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FlyWheels (Ruedas voladoras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#climber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Climber
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-la-superstructure-compositesubsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. La Superstructure — CompositeSubsystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. La Superstructure — CompositeSubsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-compuestos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos compuestos principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-sistema-de-autonomia-pathplanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Sistema de Autonomia (PathPlanner)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Sistema de Autonomia (PathPlanner)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rutas-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rutas disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-nombrados-registrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos nombrados registrados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-telemetria-y-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Telemetria y Visualizacion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Telemetria y Visualizacion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema-de-telemetria-por-modulo-turrettelemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema de Telemetria por modulo (TurretTelemetry)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-de-advantagescope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de AdvantageScope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segnales-tunable-y-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segnales Tunable y Signal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claves-de-networktables-keymanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves de NetworkTables (KeyManager)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-diagnosticos-y-codigos-de-estado-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Diagnosticos y Codigos de Estado LED
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Diagnosticos y Codigos de Estado LED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-statuscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de un StatusCode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-codigos-de-todos-los-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de codigos de todos los modulos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-features-instaladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Features Instaladas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Features Instaladas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-activas-en-marsiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features activas en MARSIANO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funcionan-los-annotation-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funcionan los annotation processors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-instalar-una-nueva-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como instalar una nueva feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="marsiano-analisis-tecnico-del-proyecto">MARSIANO - Análisis Técnico del Proyecto</h1>
+<blockquote>
+<p>Documentación técnica del robot MARSIANO, desarrollado por STZ Robotics para la temporada FRC 2026.
+Basado en el MARS Framework — una arquitectura modular propia del equipo.</p>
+</blockquote>
+<hr />
+<h2 id="tabla-de-contenidos">Tabla de Contenidos</h2>
+<ol>
+<li><a href="#1-introducción">Introducción</a></li>
+<li><a href="#2-tecnologías-y-dependencias">Tecnologías y Dependencias</a></li>
+<li><a href="#3-estructura-de-directorios">Estructura de Directorios</a></li>
+<li>Flujo de Inicio: Main → Robot → RobotContainer <em>(próximamente)</em></li>
+<li>El Manifest y los Feature Flags <em>(próximamente)</em></li>
+<li>Arquitectura de Módulos <em>(próximamente)</em></li>
+<li>El Patrón IO <em>(próximamente)</em></li>
+<li>El Patrón Request <em>(próximamente)</em></li>
+<li>Bindings de Controladores <em>(próximamente)</em></li>
+<li>Autonomía con PathPlanner <em>(próximamente)</em></li>
+<li>Telemetría y AdvantageScope <em>(próximamente)</em></li>
+<li>Features Instaladas <em>(próximamente)</em></li>
+</ol>
+<hr />
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>MARSIANO es el código del robot competitivo de STZ Robotics para la temporada <strong>FRC 2026</strong> (FIRST Robotics Competition). El robot es un <strong>shooter con swerve drive</strong> — es decir, puede desplazarse en cualquier dirección mientras sus ruedas giran de forma independiente — y es capaz de recolectar y disparar "fuel" (piezas de juego) incluso mientras se mueve.</p>
+<p>El proyecto está construido sobre el <strong>MARS Framework</strong>, una arquitectura modular desarrollada internamente por STZ Robotics que propone una forma ordenada de organizar subsistemas, abstraer el hardware y reutilizar código entre temporadas.</p>
+<h3 id="lo-que-puede-hacer-el-robot">Lo que puede hacer el robot</h3>
+<ul>
+<li>Conducir en swerve drive con control de campo (field-centric)</li>
+<li>Recolectar fuel con un brazo de intake</li>
+<li>Transportar fuel internamente con un indexer de doble rueda</li>
+<li>Apuntar con una torreta giratoria (±85 grados)</li>
+<li>Ajustar el ángulo de disparo con un brazo (hood)</li>
+<li>Disparar con dos flywheels (lanzadores de rueda)</li>
+<li>Ejecutar rutas autónomas pre-programadas con PathPlanner</li>
+<li>Trepar con un mecanismo de climber de gancho</li>
+</ul>
+<h3 id="estado-actual-del-hardware">Estado actual del hardware</h3>
+<p>El robot está configurado para funcionar con hardware real (<code>CURRENT_MODE = RunMode.REAL</code>). Algunas funcionalidades están deshabilitadas intencionalmente:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Estado</th>
+<th>Razón</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HAS_LIMELIGHT</code></td>
+<td><code>false</code></td>
+<td>Deshabilitado explícitamente ("NO CAMBIAR")</td>
+</tr>
+<tr>
+<td><code>HAS_QUESTNAV</code></td>
+<td><code>false</code></td>
+<td>Quest navigation no disponible</td>
+</tr>
+<tr>
+<td><code>HAS_MARS_GCS</code></td>
+<td><code>false</code></td>
+<td>Ground Control Station no activo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-tecnologias-y-dependencias">2. Tecnologías y Dependencias</h2>
+<p>El proyecto usa varias librerías externas que se declaran en la carpeta <code>vendordeps/</code> y se gestionan con Gradle.</p>
+<h3 id="librerias-principales">Librerías principales</h3>
+<table>
+<thead>
+<tr>
+<th>Librería</th>
+<th>Versión</th>
+<th>Para qué se usa</th>
+<th>Documentación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WPILib</strong></td>
+<td>2026.1.1</td>
+<td>Framework base de FRC: TimedRobot, Command Scheduler, SmartDashboard</td>
+<td><a href="https://docs.wpilib.org/en/stable/">docs.wpilib.org</a></td>
+</tr>
+<tr>
+<td><strong>CTRE Phoenix 6</strong></td>
+<td>26.1.1</td>
+<td>Motores Kraken X60, Swerve Drive modular, TalonFX</td>
+<td><a href="https://pro.docs.ctr-electronics.com/en/stable/">pro.docs.ctr-electronics.com</a></td>
+</tr>
+<tr>
+<td><strong>REV Robotics</strong></td>
+<td>latest</td>
+<td>Motores SparkMax (torreta e indexer)</td>
+<td><a href="https://docs.revrobotics.com/">docs.revrobotics.com</a></td>
+</tr>
+<tr>
+<td><strong>PathPlanner</strong></td>
+<td>2026.1.2</td>
+<td>Generación y seguimiento de rutas autónomas</td>
+<td><a href="https://pathplanner.dev/home.html">pathplanner.dev</a></td>
+</tr>
+<tr>
+<td><strong>MARS</strong></td>
+<td>1.6.0</td>
+<td>Arquitectura modular: subsistemas, requests, builders</td>
+<td><a href="https://github.com/Imcab/Mars-marketplace">Mars-marketplace</a></td>
+</tr>
+<tr>
+<td><strong>ForgeMini</strong></td>
+<td>1.1.1</td>
+<td>Wrapper de NetworkTables para publicar datos al dashboard</td>
+<td><a href="https://github.com/STZ-Robotics">github.com/STZ-Robotics</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-del-mars-marketplace-instaladas">Features del MARS Marketplace instaladas</h3>
+<p>Además de las librerías base, el proyecto instala "features" — extensiones modulares del ecosistema MARS — declaradas en la carpeta <code>workspace/features/</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Versión</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DictionaryFeature</strong></td>
+<td>1.0.0</td>
+<td>Diccionario de strings para logging estructurado</td>
+</tr>
+<tr>
+<td><strong>MARSPoseFinderCTRESwerve</strong></td>
+<td>1.0.0</td>
+<td>Navegación a coordenadas de campo con PathPlanner + CTRE</td>
+</tr>
+<tr>
+<td><strong>MarsProcessor</strong></td>
+<td>1.0.5</td>
+<td>Annotation processor del framework MARS</td>
+</tr>
+<tr>
+<td><strong>UnitProcessor</strong></td>
+<td>1.0.3</td>
+<td>Procesador de unidades tipadas para telemetría</td>
+</tr>
+</tbody>
+</table>
+<h3 id="controladores-de-motor-por-subsistema">Controladores de motor por subsistema</h3>
+<table>
+<thead>
+<tr>
+<th>Subsistema</th>
+<th>Controlador</th>
+<th>Tipo de motor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Torreta (Turret)</td>
+<td>SparkMax (ID 19)</td>
+<td>NEO (REV)</td>
+</tr>
+<tr>
+<td>Brazo (Arm)</td>
+<td>TalonFX</td>
+<td>Kraken X60 (CTRE)</td>
+</tr>
+<tr>
+<td>Intake</td>
+<td>TalonFX</td>
+<td>Kraken X60 (CTRE)</td>
+</tr>
+<tr>
+<td>Indexer</td>
+<td>SparkMax</td>
+<td>NEO (REV)</td>
+</tr>
+<tr>
+<td>Flywheel Shooter</td>
+<td>TalonFX</td>
+<td>Kraken X60 (CTRE)</td>
+</tr>
+<tr>
+<td>Flywheel Intake</td>
+<td>TalonFX</td>
+<td>Kraken X60 (CTRE)</td>
+</tr>
+<tr>
+<td>Climber</td>
+<td>TalonFX</td>
+<td>Kraken X60 (CTRE)</td>
+</tr>
+<tr>
+<td>Swerve Drive (x4)</td>
+<td>TalonFX + CANcoder</td>
+<td>Kraken X60 (CTRE)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-estructura-de-directorios">3. Estructura de Directorios</h2>
+<p>A continuación se muestra el árbol de carpetas del proyecto con una breve explicación de cada parte. La convención de MARS separa claramente la <strong>configuración</strong> del <strong>hardware</strong> y de la <strong>lógica de control</strong>.</p>
+<pre><code>MARSIANO/
+├── build.gradle                          # Configuración de Gradle: dependencias, tareas, deployment
+├── settings.gradle                       # Nombre del proyecto Gradle
+├── ProjectUnits.json                     # Definición de unidades para telemetría (UnitProcessor)
+│
+├── vendordeps/                           # Librerías externas en formato JSON (instaladas con WPILib)
+│   ├── Phoenix6-26.1.1.json              # CTRE Phoenix 6 (Kraken, Swerve)
+│   ├── REVLib.json                       # REV Robotics (SparkMax)
+│   ├── PathplannerLib-2026.1.2.json      # PathPlanner (rutas autónomas)
+│   ├── Mars.json                         # MARS Framework
+│   ├── ForgeMini.json                    # ForgeMini (NetworkTables wrapper)
+│   ├── WPILibNewCommands.json            # WPILib Command-Based
+│   └── questnavlib.json                  # QuestNav (deshabilitado)
+│
+├── workspace/
+│   └── features/                         # Features del MARS Marketplace instaladas
+│       ├── DictionaryFeature.json
+│       ├── MARSPoseFinderCTRESwerve.json
+│       ├── MarsProcessor.json
+│       └── UnitProcessor.json
+│
+└── src/main/java/frc/robot/
+    │
+    ├── Main.java                         # Punto de entrada: llama a RobotBase.startRobot(Robot::new)
+    ├── Robot.java                        # Clase principal: extiende TimedRobot, maneja ciclo de vida
+    ├── RobotContainer.java               # Contenedor central: instancia todos los subsistemas y bindings
+    ├── BuildConstants.java               # Auto-generado por Gradle: info de commit git, fecha, rama
+    │
+    ├── configuration/                    # Todo lo que configura el robot (no el hardware en sí)
+    │   ├── Manifest.java                 # Feature flags + clases Builder para cada subsistema
+    │   ├── KeyManager.java               # Claves de NetworkTables para telemetría
+    │   │
+    │   ├── constants/                    # Constantes numericas del robot
+    │   │   ├── Constants.java            # Tolerancias, coordenadas del hub, tablas de interpolación
+    │   │   └── ModuleConstants/          # Constantes específicas por módulo
+    │   │       ├── SwerveConstants.java
+    │   │       ├── TurretConstants.java
+    │   │       ├── ArmConstants.java
+    │   │       ├── FlywheelConstants.java
+    │   │       ├── IntakeConstants.java
+    │   │       ├── IndexerConstants.java
+    │   │       ├── ClimberConstants.java
+    │   │       ├── VisionConstants.java
+    │   │       └── TunerConstants.java   # Parámetros del Swerve (generados por Phoenix Tuner X)
+    │   │
+    │   ├── bindings/                     # Mapeo de botones de controlador a comandos
+    │   │   ├── DriverBindings.java       # Conducción: joystick → drivetrain
+    │   │   ├── OperatorBindings.java     # Operación: botones → superstructure
+    │   │   ├── AutoBindings.java         # Comandos nombrados para PathPlanner
+    │   │   └── TestBindings.java         # Comandos de modo test
+    │   │
+    │   └── advantageScope/              # Nodos de visualización para AdvantageScope
+    │       └── visuals/nodes/
+    │           ├── visualizer/           # Modelo 3D del robot (torreta, hood, intake)
+    │           ├── trajectory/           # Visualización de trayectorias
+    │           └── gamepiece/            # Visualización de piezas de juego con física
+    │
+    ├── core/                            # El hardware real del robot
+    │   └── modules/
+    │       ├── swerve/                  # Drivetrain (CTRE Swerve)
+    │       │   ├── CommandSwerveDrivetrain.java   # Subsistema principal del drivetrain
+    │       │   ├── SwerveRequestFactory.java      # Requests de movimiento (field-centric, brake, etc.)
+    │       │   └── SwerveTelemetry.java           # Logging del estado del swerve
+    │       │
+    │       └── superstructure/          # Todos los mecanismos de disparo
+    │           ├── composite/           # CompositeSubsystem: agrega todos los módulos
+    │           │   ├── Superstructure.java         # Comandos de alto nivel (shoot, eat, clear)
+    │           │   ├── SuperstructureIO.java        # Agrega los IOs de todos los módulos
+    │           │   └── SuperstructureData.java      # Snapshot de estado de toda la superestructura
+    │           │
+    │           └── modules/             # Módulos individuales (cada uno es un ModularSubsystem)
+    │               ├── turretmodule/    # Torreta giratoria
+    │               │   ├── Turret.java
+    │               │   ├── TurretIO.java           # Interfaz de hardware (contrato)
+    │               │   ├── TurretIOSparkMax.java   # Implementación real (SparkMax)
+    │               │   ├── TurretIOSim.java        # Implementación de simulación
+    │               │   └── TurretIOFallback.java   # Implementación vacía (hardware desactivado)
+    │               │
+    │               ├── armmodule/       # Brazo de ángulo de disparo (hood)
+    │               │   ├── Arm.java
+    │               │   ├── ArmIO.java
+    │               │   ├── ArmIOKraken.java
+    │               │   ├── ArmIOSim.java
+    │               │   └── ArmIOFallback.java
+    │               │
+    │               ├── flywheelmodule/  # Ruedas de disparo (2 instancias: shooter + intake)
+    │               │   ├── FlyWheel.java
+    │               │   ├── FlyWheelIO.java
+    │               │   ├── FlyWheelIOKrakenShooter.java
+    │               │   ├── FlyWheelIOKrakenIntake.java
+    │               │   ├── FlyWheelIOSim.java
+    │               │   └── FlyWheelIOFallback.java
+    │               │
+    │               ├── intakemodule/    # Brazo de recolección de fuel
+    │               ├── indexermodule/   # Transportador interno de fuel
+    │               └── climbermodule/   # Mecanismo de trepa
+    │
+    ├── requests/                        # Objetos Request (comandos con parámetros)
+    │   └── moduleRequests/
+    │       ├── TurretRequest.java
+    │       ├── ArmRequest.java
+    │       ├── FlyWheelRequest.java
+    │       ├── IntakeRequest.java
+    │       ├── IndexerRequest.java
+    │       └── ClimberRequest.java
+    │
+    ├── diagnostics/                     # Códigos de estado para LEDs
+    │   ├── TurretCode.java
+    │   ├── ArmCode.java
+    │   ├── FlywheelsCode.java
+    │   ├── IntakeCode.java
+    │   ├── IndexerCode.java
+    │   └── ClimberCode.java
+    │
+    └── helpers/                         # Utilidades generales
+        ├── Utils.java
+        ├── AllianceUtil.java            # Voltea coordenadas para alianza Roja vs Azul
+        ├── LimelightHelpers.java        # Parseo de JSON de cámara Limelight
+        ├── SysIdRoutineManager.java     # Rutinas de caracterización de motores (SysId)
+        ├── AutoSelector.java
+        └── KeyManager.java
+</code></pre>
+<h3 id="por-que-esta-separacion-importa">Por qué esta separación importa</h3>
+<p>La separación entre <code>configuration/</code> y <code>core/</code> es fundamental en el MARS Framework:</p>
+<ul>
+<li><strong><code>configuration/</code></strong> — Es donde decides <strong>qué</strong> tiene tu robot y <strong>cómo</strong> están conectados. No hay lógica de hardware aquí. Si cambias de un SparkMax a un Kraken, solo tocas el Manifest.</li>
+<li><strong><code>core/</code></strong> — Es donde está el <strong>hardware real</strong>. Cada módulo tiene su propia implementación de IO que puede ser Real, Sim o Fallback.</li>
+<li><strong><code>requests/</code></strong> — Es como se le dan órdenes a los subsistemas, sin depender de botones o comandos específicos.</li>
+</ul>
+<hr />
+<h2 id="4-flujo-de-inicio-main-robot-robotcontainer">4. Flujo de Inicio: Main → Robot → RobotContainer</h2>
+<p>Cuando el robot enciende, la JVM ejecuta <code>Main.java</code>, que simplemente lanza el robot:</p>
+<pre><code class="language-java">// Main.java — solo una línea importante
+RobotBase.startRobot(Robot::new);
+</code></pre>
+<p>Esto llama al constructor de <code>Robot</code>, que es donde empieza todo lo interesante.</p>
+<h3 id="robotjava-el-director-de-orquesta">Robot.java — el director de orquesta</h3>
+<p><code>Robot</code> extiende <code>TimedRobot</code> de WPILib. WPILib llama automáticamente a sus métodos cada 20ms según el modo del robot (disabled, autonomous, teleop, test). Lo más importante ocurre en el constructor:</p>
+<pre><code class="language-java">public Robot() {
+    // 1. Le dice al framework en qué modo operar (REAL, SIM, REPLAY)
+    Environment.setMode(Manifest.CURRENT_MODE);
+
+    // 2. Opcionalmente inicia el terminal del Ground Control Station
+    if (Manifest.HAS_MARS_GCS) {
+        TerminalGCS.initNetworkStream();
+        TerminalGCS.bootSequence();
+    }
+
+    // 3. Crea TODOS los subsistemas y bindings
+    m_robotContainer = new RobotContainer();
+
+    // 4. En hardware real, inicia la cámara USB
+    if (Environment.getMode() == RunMode.REAL) {
+        CameraServer.startAutomaticCapture();
+    }
+
+    // 5. Publica el modo actual al dashboard
+    NetworkIO.set(&quot;System&quot;, &quot;IO&quot;, Environment.getMode().name());
+}
+</code></pre>
+<p>Después, en cada ciclo de 20ms:</p>
+<pre><code class="language-java">@Override
+public void robotPeriodic() {
+    CommandScheduler.getInstance().run();   // Ejecuta todos los comandos activos
+    m_robotContainer.updateNodes();         // Actualiza los nodos de visualización
+}
+</code></pre>
+<p>El <code>CommandScheduler</code> es el corazón del sistema — revisa qué botones están presionados, qué comandos deben correr, y llama a <code>execute()</code> en cada uno de ellos.</p>
+<h3 id="ciclo-de-vida-por-modo">Ciclo de vida por modo</h3>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disabledInit()</code></td>
+<td>Configura la Limelight en modo IMU para no resetear la orientación</td>
+</tr>
+<tr>
+<td><code>autonomousInit()</code></td>
+<td>Obtiene el comando autónomo de <code>RobotContainer</code> y lo schedula</td>
+</tr>
+<tr>
+<td><code>teleopInit()</code></td>
+<td>Cancela el comando autónomo si seguía corriendo</td>
+</tr>
+<tr>
+<td><code>testInit()</code></td>
+<td>Cancela todos los comandos y corre la rutina de test seleccionada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="robotcontainerjava-la-fabrica-del-robot">RobotContainer.java — la fábrica del robot</h3>
+<p><code>RobotContainer</code> construye y conecta todo. Implementa la interfaz <code>IRobotContainer</code> del MARS Framework. Su constructor sigue este orden fijo:</p>
+<pre><code class="language-java">public RobotContainer() {
+
+    // Paso 1: Controladores
+    this.driver   = ControlsBuilder.buildDriver();    // Puerto 0
+    this.operator = ControlsBuilder.buildOperator();  // Puerto 1
+
+    // Paso 2: Drivetrain (independiente de todo)
+    this.drivetrain = DrivetrainBuilder.buildModule();
+
+    // Paso 3: Módulos individuales
+    this.turret         = TurretBuilder.create().withDrivetrain(drivetrain).buildModule();
+    this.arm            = ArmBuilder.create().buildModule();
+    this.intake         = IntakeBuilder.create().buildModule();
+    this.index          = IndexerBuilder.create().buildModule();
+    this.flywheelShooter = FlywheelShooterBuilder.create().buildModule();
+    this.flywheelIntake  = FlywheelIntakeBuilder.create().buildModule();
+
+    // Paso 4: Superstructure (necesita los módulos del paso 3)
+    this.superstructure = Manifest.SuperstructureBuilder.superBuild(
+        this.turret, this.arm, this.intake, this.index,
+        this.flywheelShooter, this.flywheelIntake);
+
+    // Paso 5: Nodos de visualización
+    this.virtualRobot = VisualizerBuilder.buildNode(...);
+    this.trajetorySim = TrajectoryBuilder.buildNode(...);
+    this.gamePieceViz = GamePieceBuilder.buildNode(...);
+
+    // Paso 6: Bindings (último, necesita todo lo anterior)
+    DriverBindings.create(drivetrain, driver).bind();
+    OperatorBindings.create(operator, superstructure).withNodes(...).bind();
+    this.test = TestBindings.create(superstructure);
+    this.autoCommand = AutoBindings.create(superstructure);
+    test.bind();
+    autoCommand.bind();
+}
+</code></pre>
+<p>El orden importa: los módulos deben existir antes que la Superstructure, y los bindings deben ir al final porque necesitan los comandos de los subsistemas.</p>
+<hr />
+<h2 id="5-el-manifest-y-los-feature-flags">5. El Manifest y los Feature Flags</h2>
+<p><code>Manifest.java</code> es el archivo de configuración central del robot. Tiene dos responsabilidades:</p>
+<ol>
+<li><strong>Feature Flags</strong> — booleanos que dicen qué hardware existe</li>
+<li><strong>Builders</strong> — clases estáticas anidadas que construyen cada subsistema</li>
+</ol>
+<h3 id="feature-flags">Feature Flags</h3>
+<pre><code class="language-java">public static final RunMode CURRENT_MODE = RunMode.REAL; // REAL | SIM | REPLAY
+
+public static final boolean HAS_DRIVETRAIN     = true;
+public static final boolean HAS_TURRET         = true;
+public static final boolean HAS_ARM            = true;
+public static final boolean HAS_INTAKE         = true;
+public static final boolean HAS_INTAKE_WHEELS  = true;
+public static final boolean HAS_SHOOTER_WHEELS = true;
+public static final boolean HAS_INDEXER        = true;
+public static final boolean HAS_LIMELIGHT      = false;  // NO CAMBIAR
+public static final boolean HAS_QUESTNAV       = false;
+public static final boolean HAS_MARS_GCS       = false;
+public static final boolean HAS_VISUALS        = true;
+</code></pre>
+<p>Cuando un flag está en <code>false</code>, el Manifest construye un <code>Fallback</code> — una implementación vacía que no hace nada — en lugar del hardware real. Así el robot puede correr en simulación o con hardware parcial sin cambiar el código de lógica.</p>
+<h3 id="el-patron-injector">El patrón Injector</h3>
+<p>La magia está en <code>Injector.createIO()</code>. Este método del MARS Framework decide automáticamente qué implementación de IO crear según el flag y el modo:</p>
+<pre><code class="language-java">// Ejemplo del ArmBuilder
+@Override
+public Arm buildModule() {
+    ArmIO io = Injector.createIO(
+        HAS_ARM,           // ¿el hardware existe?
+        ArmIOFallback::new, // si false → usar Fallback
+        ArmIOKraken::new,   // si true + REAL → usar hardware real
+        ArmIOSim::new       // si true + SIM → usar simulación
+    );
+    return new Arm(io);
+}
+</code></pre>
+<p>La tabla de decisión del <code>Injector</code>:</p>
+<table>
+<thead>
+<tr>
+<th><code>HAS_ARM</code></th>
+<th><code>CURRENT_MODE</code></th>
+<th>IO creado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td>cualquiera</td>
+<td><code>ArmIOFallback</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>REAL</code></td>
+<td><code>ArmIOKraken</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>SIM</code></td>
+<td><code>ArmIOSim</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="builders-con-dependencias">Builders con dependencias</h3>
+<p>Algunos módulos necesitan dependencias extra. El <code>TurretBuilder</code> necesita el drivetrain para calcular la pose del robot:</p>
+<pre><code class="language-java">public static class TurretBuilder implements Builder&lt;Turret&gt; {
+    private CommandSwerveDrivetrain drivetrain;
+
+    public TurretBuilder withDrivetrain(CommandSwerveDrivetrain dt) {
+        this.drivetrain = dt;
+        return this;
+    }
+
+    @Override
+    public Turret buildModule() {
+        if (HAS_TURRET &amp;&amp; this.drivetrain == null) {
+            throw new IllegalStateException(
+                &quot;Falta el Drivetrain en la Torreta. Usa .withDrivetrain()&quot;);
+        }
+
+        TurretIO io = Injector.createIO(
+            HAS_TURRET, TurretIOFallback::new, TurretIOSparkMax::new, TurretIOSim::new);
+
+        // Si no hay drivetrain, usa pose y speeds en cero
+        Supplier&lt;Pose2d&gt; pose = (drivetrain != null)
+            ? () -&gt; drivetrain.getState().Pose
+            : () -&gt; Pose2d.kZero;
+
+        return new Turret(io, pose, speeds);
+    }
+}
+</code></pre>
+<p>Este patrón de builder fluido (<code>TurretBuilder.create().withDrivetrain(...).buildModule()</code>) es consistente en todo el Manifest y hace que el <code>RobotContainer</code> sea fácil de leer de un vistazo.</p>
+<hr />
+<h2 id="6-el-patron-io">6. El Patrón IO</h2>
+<p>El patrón IO es la piedra angular del MARS Framework. Su objetivo es <strong>separar la lógica de control del hardware físico</strong>, de forma que el mismo código de subsistema funcione en el robot real, en simulación, o sin hardware.</p>
+<p>Cada módulo tiene tres capas:</p>
+<pre><code>TurretIO          ← interfaz (el contrato)
+  ├── TurretIOSparkMax   ← implementación real (SparkMax)
+  ├── TurretIOSim        ← implementación de simulación
+  └── TurretIOFallback   ← implementación vacía (no hace nada)
+</code></pre>
+<h3 id="la-interfaz-io">La interfaz IO</h3>
+<p>Define qué puede hacer el hardware y qué datos produce. Usando la torreta como ejemplo:</p>
+<pre><code class="language-java">// TurretIO.java
+@Fallback  // el MarsProcessor genera TurretIOFallback automáticamente
+public interface TurretIO extends IO&lt;TurretInputs&gt; {
+
+    // Clase interna: snapshot del estado del hardware
+    public static class TurretInputs extends Data&lt;TurretInputs&gt; {
+
+        @Unit(value = &quot;Rotations&quot;, group = &quot;Turret&quot;)
+        public Rotation2d angle = new Rotation2d();       // ángulo actual
+
+        @Unit(value = &quot;Rotations&quot;, group = &quot;Turret&quot;)
+        public Rotation2d targetAngle = new Rotation2d(); // ángulo objetivo
+
+        @Unit(value = &quot;RPS&quot;, group = &quot;Turret&quot;)
+        public double velocityRPS = 0;                    // velocidad en RPS
+
+        @Unit(value = &quot;Volts&quot;, group = &quot;Turret&quot;)
+        public double appliedVolts = 0.0;                 // voltaje aplicado
+
+        public Pose2d robotPose = new Pose2d();
+        public ChassisSpeeds robotSpeed = new ChassisSpeeds();
+
+        @Override
+        public TurretInputs snapshot() { /* crea una copia del estado */ }
+    }
+
+    // Métodos que el hardware debe implementar
+    public void setVoltage(double volts);
+    public void setPosition(Rotation2d angle);
+    public void setSpeed(double speed);
+    public void setPositionWithFF(Rotation2d angle, double arbFFVolts);
+    public void stop();
+    public void resetEnc();
+}
+</code></pre>
+<p>La anotación <code>@Fallback</code> le indica al <code>MarsProcessor</code> que genere automáticamente un <code>TurretIOFallback</code> con todos los métodos vacíos. No hay que escribirlo a mano.</p>
+<p>La anotación <code>@Unit</code> es del <code>UnitProcessor</code> — documenta las unidades de cada campo para telemetría tipada.</p>
+<h3 id="la-implementacion-real-sparkmax">La implementación real (SparkMax)</h3>
+<pre><code class="language-java">// TurretIOSparkMax.java
+public class TurretIOSparkMax implements TurretIO {
+    private final SparkMax m_motor;
+    private final RelativeEncoder m_encoder;
+
+    public TurretIOSparkMax() {
+        m_motor = new SparkMax(TurretConstants.kMotorId, MotorType.kBrushless);
+        m_encoder = m_motor.getEncoder();
+        motorConfig();
+    }
+
+    private void motorConfig() {
+        var config = new SparkMaxConfig();
+
+        // PID cerrado
+        config.closedLoop
+            .pid(TurretConstants.kP, TurretConstants.kI, TurretConstants.kD)
+            .outputRange(TurretConstants.kMinOutput, TurretConstants.kMaxOutput);
+
+        // Feed Forward (estático, de velocidad, de aceleración)
+        config.closedLoop.feedForward
+            .kS(TurretConstants.kS)
+            .kV(TurretConstants.kV)
+            .kA(TurretConstants.kA);
+
+        // Límites de seguridad y corriente
+        config
+            .idleMode(IdleMode.kBrake)
+            .inverted(TurretConstants.kMotorInverted)
+            .smartCurrentLimit(TurretConstants.kCurrentLimit);
+
+        // Soft limits (evita que la torreta gire más de lo permitido)
+        config.softLimit
+            .forwardSoftLimit(TurretConstants.kUpperLimit)
+            .forwardSoftLimitEnabled(true)
+            .reverseSoftLimit(TurretConstants.kLowerLimit)
+            .reverseSoftLimitEnabled(true);
+
+        m_motor.configure(config, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+    }
+
+    // Implementación de los métodos de la interfaz
+    @Override
+    public void updateInputs(TurretInputs inputs) {
+        inputs.angle = Rotation2d.fromRotations(-m_encoder.getPosition());
+        inputs.velocityRPS = m_encoder.getVelocity();
+        inputs.appliedVolts = m_motor.getAppliedOutput() * m_motor.getBusVoltage();
+    }
+
+    @Override
+    public void setPosition(Rotation2d angle) {
+        m_motor.getClosedLoopController()
+            .setSetpoint(angle.getRotations(), ControlType.kPosition);
+    }
+
+    @Override
+    public void setPositionWithFF(Rotation2d angle, double arbFFVolts) {
+        // Control de posición con feedforward arbitrario (para compensar velocidad del chasis)
+        m_motor.getClosedLoopController().setSetpoint(
+            angle.getRotations(), ControlType.kPosition,
+            ClosedLoopSlot.kSlot0, arbFFVolts, ArbFFUnits.kVoltage);
+    }
+
+    @Override
+    public void stop() { m_motor.stopMotor(); }
+}
+</code></pre>
+<h3 id="la-clase-del-subsistema-turret">La clase del subsistema (Turret)</h3>
+<p>El subsistema extiende <code>ModularSubsystem</code> del MARS Framework, que se encarga del ciclo de actualización IO y de correr los Requests. El código del subsistema no sabe si tiene un SparkMax o una simulación:</p>
+<pre><code class="language-java">public class Turret extends ModularSubsystem&lt;TurretInputs, TurretIO&gt; implements TurretCommands {
+
+    public Turret(TurretIO io, Supplier&lt;Pose2d&gt; pose, Supplier&lt;ChassisSpeeds&gt; speeds) {
+        super(
+            SubsystemBuilder.&lt;TurretInputs, TurretIO&gt;setup()
+                .key(KeyManager.TURRET_KEY)       // clave de NetworkTables
+                .hardware(io, new TurretInputs()) // la IO y el snapshot inicial
+                .request(new TurretRequest.Idle()) // request por defecto
+                .telemetry(new TurretTelemetry())); // cómo publicar datos
+
+        setDefaultCommand(runRequest(() -&gt; new TurretRequest.Idle()));
+    }
+
+    // Verifica si la torreta llegó al ángulo objetivo
+    public boolean isAtTarget(double toleranceDegrees) {
+        return MathUtil.isNear(
+            inputs.targetAngle.getDegrees(),
+            inputs.angle.getDegrees(),
+            toleranceDegrees);
+    }
+
+    // Ejecuta un request dado
+    @Override
+    public Command setControl(Supplier&lt;TurretRequest&gt; request) {
+        return runRequest(request);
+    }
+
+    // Llamado cada ciclo — inyecta pose y speeds en el snapshot
+    @Override
+    public void absolutePeriodic(TurretInputs data) {
+        data.robotPose = poseSupplier.get();
+        data.robotSpeed = speedSupplier.get();
+    }
+}
+</code></pre>
+<p><code>absolutePeriodic()</code> es el método del MARS Framework que se llama cada ciclo antes de ejecutar el Request activo. Es el lugar para inyectar datos externos (como la pose del drivetrain) en el snapshot de IO.</p>
+<hr />
+<h2 id="7-el-patron-request">7. El Patrón Request</h2>
+<p>Los <code>Request</code> son la forma en que se le dan órdenes a un subsistema. Son objetos que implementan <code>apply(data, actor)</code> — donde <code>data</code> es el snapshot de IO y <code>actor</code> es la implementación de IO — y retornan un <code>ActionStatus</code> con el estado actual.</p>
+<p>El beneficio de los Requests frente a comandos WPILib directos es que son <strong>composables, configurables y no dependen de botones</strong>. Un Request es simplemente datos + lógica.</p>
+<h3 id="estructura-de-turretrequest">Estructura de TurretRequest</h3>
+<pre><code class="language-java">@RequestFactory  // el MarsProcessor genera TurretRequestFactory automáticamente
+public interface TurretRequest extends Request&lt;TurretInputs, TurretIO&gt; {
+
+    // --- Request 1: Idle (no hace nada) ---
+    @CreateCommand(name = &quot;stop&quot;)
+    public static class Idle implements TurretRequest {
+        @Override
+        public ActionStatus apply(TurretInputs data, TurretIO actor) {
+            actor.stop();
+            data.targetAngle = data.angle; // el target sigue siendo el ángulo actual
+            return ActionStatus.of(TurretCode.IDLE, &quot;Idle&quot;);
+        }
+    }
+
+    // --- Request 2: Control de posición (builder fluido) ---
+    @CreateCommand(name = &quot;toPosition&quot;)
+    public static class Position implements TurretRequest {
+        private Rotation2d m_targetAngle = new Rotation2d();
+        private double toleranceDegrees = 1.0;
+
+        // Métodos fluidos para configurar el request
+        public Position withTargetAngle(Rotation2d angle) {
+            this.m_targetAngle = angle;
+            return this;
+        }
+
+        public Position withTolerance(double tolerance) {
+            this.toleranceDegrees = tolerance;
+            return this;
+        }
+
+        @Override
+        public ActionStatus apply(TurretInputs data, TurretIO actor) {
+            data.targetAngle = m_targetAngle;
+            actor.setPosition(m_targetAngle);
+
+            boolean isLocked = MathUtil.isNear(
+                m_targetAngle.getDegrees(), data.angle.getDegrees(), toleranceDegrees);
+
+            // El ActionStatus comunica el estado al LED y al dashboard
+            return isLocked
+                ? ActionStatus.of(TurretCode.LOCKED, &quot;Target reached&quot;)
+                : ActionStatus.of(TurretCode.TRACKING, &quot;Tracking &quot; + m_targetAngle.getDegrees() + &quot;°&quot;);
+        }
+    }
+
+    // --- Request 3: Apuntar a un target en el campo (tracking dinámico) ---
+    @CreateCommand(name = &quot;lockToTarget&quot;)
+    public static class LockOnTarget implements TurretRequest {
+        private Supplier&lt;Translation2d&gt; targetSupplier;
+        private DoubleSupplier rotationSupplier;
+
+        public LockOnTarget withTarget(Supplier&lt;Translation2d&gt; target) { ... }
+        public LockOnTarget withChassisOmega(DoubleSupplier omega) { ... }
+
+        @Override
+        public ActionStatus apply(TurretInputs data, TurretIO actor) {
+            // Calcula el ángulo necesario para apuntar al target desde la pose actual
+            Translation2d turretPose = data.robotPose
+                .transformBy(TurretConstants.ROBOT_TO_TURRET_TRANSFORM)
+                .getTranslation();
+
+            Rotation2d fieldAngle = targetSupplier.get().minus(turretPose).getAngle();
+            Rotation2d turretSetpoint = fieldAngle.minus(data.robotPose.getRotation());
+
+            // Feed forward para compensar la rotación del chasis
+            double ffVolts = rotationSupplier.getAsDouble() * TurretConstants.kChassisAngularCompensator;
+            actor.setPositionWithFF(turretSetpoint, ffVolts);
+
+            return isLocked
+                ? ActionStatus.of(TurretCode.LOCKED, &quot;Locked on target&quot;)
+                : ActionStatus.of(TurretCode.TRACKING, &quot;Moving...&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="como-se-usa-un-request">Cómo se usa un Request</h3>
+<p>Los Requests se usan desde los Bindings a través del método <code>setControl()</code>:</p>
+<pre><code class="language-java">// Desde OperatorBindings — ir a posición fija
+turret.setControl(() -&gt; new TurretRequest.Position()
+    .withTargetAngle(Rotation2d.fromDegrees(-30))
+    .withTolerance(4.0));
+
+// Desde la Superstructure — apuntar al hub dinámicamente
+turret.setControl(() -&gt; new TurretRequest.LockOnTarget()
+    .withTarget(hubSupplier)
+    .withChassisOmega(() -&gt; speeds.omegaRadiansPerSecond));
+</code></pre>
+<p>La anotación <code>@RequestFactory</code> hace que el <code>MarsProcessor</code> genere automáticamente una clase <code>TurretRequestFactory</code> con métodos estáticos para crear cada Request sin hacer <code>new</code> directamente. Por eso en el código de Bindings se ve <code>TurretRequestFactory.manualControl()</code> en vez de <code>new TurretRequest.manualControl()</code>.</p>
+<hr />
+<h2 id="8-bindings-de-controladores">8. Bindings de Controladores</h2>
+<p>Los bindings conectan los inputs del controlador con los comandos de los subsistemas. MARS Framework provee la interfaz <code>Binding</code> con un método <code>bind()</code> donde se registran todas las asociaciones.</p>
+<p>El patrón es siempre el mismo: <code>trigger.whileTrue(comando)</code> o <code>trigger.onTrue(comando)</code>.</p>
+<h3 id="driverbindings-conducir-el-robot">DriverBindings — conducir el robot</h3>
+<pre><code class="language-java">public class DriverBindings implements Binding {
+
+    @Override
+    public void bind() {
+        // --- Comando por defecto: conducir con joystick (field-centric) ---
+        drivetrain.setDefaultCommand(
+            drivetrain.applyRequest(() -&gt;
+                SwerveRequestFactory.driveFieldCentric()
+                    .withVelocityX(
+                        -driverLeftStick.y().getAsDouble()     // adelante/atrás
+                        * SwerveConstants.MaxSpeed
+                        * (driverBumpers.right().getAsBoolean() ? 0.5 : 1.0)  // RB = mitad velocidad
+                        * (driverBumpers.left().getAsBoolean()  ? 0.2 : 1.0)) // LB = precisión
+                    .withVelocityY(
+                        -driverLeftStick.x().getAsDouble()     // izquierda/derecha
+                        * SwerveConstants.MaxSpeed
+                        * ...)
+                    .withRotationalRate(
+                        -driverRightStick.x().getAsDouble()    // rotación
+                        * SwerveConstants.MaxAngularRate)));
+
+        // Y = reset orientación campo (útil si el giroscopio se pierde)
+        driverButtons.top().onTrue(drivetrain.runOnce(drivetrain::seedFieldCentric));
+
+        // A = frenos (todas las ruedas en X, el robot no se mueve)
+        driverButtons.bottom().whileTrue(
+            drivetrain.applyRequest(() -&gt; SwerveRequestFactory.brake()));
+
+        // X = navegar automáticamente a coordenada (0.579, 0.579)
+        driverButtons.left().whileTrue(
+            drivetrain.getPoseFinder().toPose(new Pose2d(0.579, 0.579, Rotation2d.kZero)));
+
+        // B = navegar a (3.559, 2.766) mirando 90° CCW
+        driverButtons.right().whileTrue(
+            drivetrain.getPoseFinder().toPose(new Pose2d(3.559, 2.766, Rotation2d.kCCW_90deg)));
+    }
+}
+</code></pre>
+<h3 id="operatorbindings-operar-los-mecanismos">OperatorBindings — operar los mecanismos</h3>
+<pre><code class="language-java">@Override
+public void bind() {
+    // A = bajar intake a -138° (posición de recolección)
+    buttons.bottom().whileTrue(
+        superstructure.getIntake().setControl(() -&gt;
+            IntakeRequestFactory.setAngle()
+                .withAngle(-138)
+                .Tolerance(Constants.INTAKE_TOLERANCE)
+                .withMode(intakeMODE.kDOWN)));
+
+    // Y = subir intake a -10° (posición de transporte)
+    buttons.top().whileTrue(
+        superstructure.getIntake().setControl(() -&gt;
+            IntakeRequestFactory.setAngle()
+                .withAngle(-10)
+                .Tolerance(Constants.INTAKE_TOLERANCE)
+                .withMode(intakeMODE.kUP)));
+
+    // B = comer fuel (intake + indexer juntos)
+    buttons.right().whileTrue(superstructure.eatCommand());
+
+    // LB = expulsar fuel
+    bumpers.left().whileTrue(superstructure.clearFuel());
+
+    // RT (sin RB) = disparar al hub dinámicamente con interpolación de ángulo y RPM
+    triggers.right().and(bumpers.right().negate()).whileTrue(
+        superstructure.shootOnTheMove(
+            superstructure.getVirtualTarget(),
+            ArmRequestFactory.interpolateTarget()
+                .withDistance(() -&gt; superstructure.getVirtualDistance())
+                .withTolerance(Constants.ARM_TOLERANCE),
+            FlyWheelRequestFactory.interpolateRPM()
+                .withDistance(() -&gt; superstructure.getVirtualDistance())
+                .withTolerance(Constants.FLYWHEEL_TOLERANCE),
+            12));  // torreta hacia la derecha
+
+    // RT + RB = mismo disparo pero torreta hacia la izquierda (-12V)
+    triggers.right().and(bumpers.right()).whileTrue(
+        superstructure.shootOnTheMove(..., -12));
+
+    // LT (sin RB) = disparar al speaker izquierdo (-30° arm, -3500 RPM, 12V torreta)
+    triggers.left().and(bumpers.right().negate()).whileTrue(
+        superstructure.shootOnTheMove(
+            new Translation2d(0.863, 4.003),
+            ArmRequestFactory.setAngle().withAngle(-30).withMode(ArmMODE.kUP),
+            FlyWheelRequestFactory.setRPM().toRPM(-3500).withTolerance(50),
+            12));
+
+    // LT + X = disparar al amp (-45° arm, -25° torreta, -2500 RPM)
+    triggers.left().and(buttons.left()).whileTrue(
+        superstructure.shoot(-45, -25, -2500));
+}
+</code></pre>
+<h3 id="resumen-del-mapa-de-controles">Resumen del mapa de controles</h3>
+<p><strong>Driver (Puerto 0 — Xbox):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Botón</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left Stick</td>
+<td>Desplazamiento (field-centric)</td>
+</tr>
+<tr>
+<td>Right Stick X</td>
+<td>Rotación</td>
+</tr>
+<tr>
+<td>Right Bumper</td>
+<td>Mitad de velocidad (0.5x)</td>
+</tr>
+<tr>
+<td>Left Bumper</td>
+<td>Modo precisión (0.2x)</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Reset orientación de campo</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Frenos (X-brake)</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Navegar a punto A del campo</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Navegar a punto B del campo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Operator (Puerto 1 — Xbox):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Botón</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Bajar intake (-138°)</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Subir intake (-10°)</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Comer fuel (intake + indexer)</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Girar flywheels shooter a -12V</td>
+</tr>
+<tr>
+<td>Left Bumper</td>
+<td>Expulsar fuel</td>
+</tr>
+<tr>
+<td>Right Trigger (sin RB)</td>
+<td>Disparar al hub con interpolación dinámica</td>
+</tr>
+<tr>
+<td>Right Trigger + RB</td>
+<td>Mismo disparo, torreta invertida</td>
+</tr>
+<tr>
+<td>Left Trigger (sin RB)</td>
+<td>Disparar al speaker izquierdo</td>
+</tr>
+<tr>
+<td>Left Trigger + RB</td>
+<td>Disparar al speaker, torreta invertida</td>
+</tr>
+<tr>
+<td>Left Trigger + X</td>
+<td>Disparar al amp</td>
+</tr>
+<tr>
+<td>Left Trigger + B</td>
+<td>Disparar al amp (variante)</td>
+</tr>
+<tr>
+<td>Right Stick + D-Pad derecho</td>
+<td>Control manual de torreta</td>
+</tr>
+<tr>
+<td>Left Stick Y + D-Pad izquierdo</td>
+<td>Control manual de disparo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-modulos-individuales">9. Módulos Individuales</h2>
+<p>La <code>Superstructure</code> agrupa seis <code>ModularSubsystem</code>. Cada uno tiene su propia interfaz IO, su implementación real y su simulación. A continuación se detalla la configuracion de hardware de cada uno.</p>
+<h3 id="turret-torreta">Turret (Torreta)</h3>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor</td>
+<td>SparkMax (CAN ID 19)</td>
+</tr>
+<tr>
+<td>Encoder</td>
+<td>Relativo integrado del SparkMax</td>
+</tr>
+<tr>
+<td>Rango de movimiento</td>
+<td>-85° a +85° (soft limits)</td>
+</tr>
+<tr>
+<td>Relacion de transmision</td>
+<td>20:1</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>PID cerrado (P=4, I=0, D=2.4) + Feed Forward (kS=0.45, kV=2)</td>
+</tr>
+<tr>
+<td>Limite de corriente</td>
+<td>40 A</td>
+</tr>
+<tr>
+<td>Modo idle</td>
+<td>Brake</td>
+</tr>
+<tr>
+<td>Posicion fisica</td>
+<td>15 cm adelante del centro del robot, 45 cm de altura</td>
+</tr>
+</tbody>
+</table>
+<p>La torreta rota sobre su eje vertical para apuntar a diferentes puntos del campo. El <code>kChassisAngularCompensator = 0.5</code> compensa la inercia cuando el chasis gira, aplicando feed forward adicional en proporcion a la velocidad angular del chasis (V/rad/s).</p>
+<h3 id="arm-brazo-hood">Arm (Brazo / Hood)</h3>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor</td>
+<td>TalonFX (Kraken X60)</td>
+</tr>
+<tr>
+<td>Encoder</td>
+<td>CANcoder externo (CANivore)</td>
+</tr>
+<tr>
+<td>Rango de movimiento</td>
+<td>-40° a 0°</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>PID de posicion de Phoenix 6 (MotionMagic o PID)</td>
+</tr>
+<tr>
+<td>Modos de operacion</td>
+<td><code>ArmMODE.kUP</code> / <code>ArmMODE.kDOWN</code></td>
+</tr>
+</tbody>
+</table>
+<p>El brazo ajusta el angulo de lanzamiento. Tiene dos modos (<code>kUP</code> y <code>kDOWN</code>) que permiten usar ganancias PID diferentes segun si sube o baja, compensando la gravedad.</p>
+<p>Los mapas de interpolacion en <code>Constants.java</code> relacionan distancia → angulo para el disparo dinamico:</p>
+<pre><code class="language-java">// Distancia en metros → angulo del brazo en grados
+INTERPOLATION_MAP.put(2.03, -8.0);
+INTERPOLATION_MAP.put(2.80, -8.0);
+INTERPOLATION_MAP.put(3.80, -18.45);
+INTERPOLATION_MAP.put(4.39, -15.0);
+INTERPOLATION_MAP.put(4.93, -16.0);
+</code></pre>
+<h3 id="flywheels-ruedas-voladoras">FlyWheels (Ruedas voladoras)</h3>
+<p>Existen dos instancias de <code>FlyWheel</code>, compartiendo la misma interfaz <code>FlyWheelIO</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Instancia</th>
+<th>Clave</th>
+<th>Motor</th>
+<th>Funcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flywheelShooter</code></td>
+<td><code>FLYWHEEL_OUTAKE_KEY</code></td>
+<td>Kraken X60</td>
+<td>Lanzar fuel hacia el hub</td>
+</tr>
+<tr>
+<td><code>flywheelIntake</code></td>
+<td><code>FLYWHEEL_INTAKE_KEY</code></td>
+<td>Kraken X60</td>
+<td>Jalar fuel desde el indexer durante recoleccion</td>
+</tr>
+</tbody>
+</table>
+<p>Ambas usan control de velocidad en RPM con tolerancia de 50 RPM. El mapa de RPM interpola distancia → velocidad:</p>
+<pre><code class="language-java">// Distancia en metros → RPM (negativo = sentido de disparo)
+RPM_MAP.put(2.03, -2650.0);
+RPM_MAP.put(2.59, -2700.0);
+RPM_MAP.put(3.80, -2900.0);
+RPM_MAP.put(4.93, -3150.0);
+</code></pre>
+<h3 id="intake">Intake</h3>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor</td>
+<td>TalonFX (Kraken X60)</td>
+</tr>
+<tr>
+<td>Rango de movimiento</td>
+<td>-138° (abajo, recoleccion) a -10° (arriba, transporte)</td>
+</tr>
+<tr>
+<td>Modos</td>
+<td><code>intakeMODE.kDOWN</code> / <code>intakeMODE.kUP</code></td>
+</tr>
+<tr>
+<td>Tolerancia</td>
+<td>2°</td>
+</tr>
+</tbody>
+</table>
+<p>El intake se baja para recoger fuel del suelo y sube para transportarlo. Igual que el brazo, tiene dos modos con ganancias distintas segun la direccion.</p>
+<h3 id="indexer">Indexer</h3>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor principal</td>
+<td>SparkMax — rollers (jala fuel hacia adentro)</td>
+</tr>
+<tr>
+<td>Motor secundario</td>
+<td>SparkMax — index (empuja fuel hacia los flywheels)</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>Solo voltaje (sin PID, sin posicion)</td>
+</tr>
+</tbody>
+</table>
+<p>El indexer tiene dos motores: <code>rollers</code> que mueve el fuel horizontalmente y <code>index</code> que lo empuja hacia arriba al shooter. Los comandos le pasan voltaje directo:</p>
+<pre><code class="language-java">// Comer fuel: rollers a 8V, index en 0
+IndexerRequestFactory.moveVoltage().withRollers(8).withIndex(0)
+
+// Disparar: ambos a 12V
+IndexerRequestFactory.moveVoltage().withRollers(12).withIndex(12)
+
+// Expulsar: ambos a -12V, luego +12V, repetido
+IndexerRequestFactory.moveVoltage().withRollers(-12).withIndex(-12)
+</code></pre>
+<h3 id="climber">Climber</h3>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor</td>
+<td>TalonFX (Kraken X60)</td>
+</tr>
+<tr>
+<td>Tipo</td>
+<td>Actuador lineal / winch</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>Posicion o voltaje</td>
+</tr>
+<tr>
+<td>Sim</td>
+<td><code>ClimberIOSim</code> disponible</td>
+</tr>
+</tbody>
+</table>
+<p>El climber no tiene bindings activos en competencia (no hay <code>ClimberBindings</code>). Su logica esta disponible pero inactiva hasta que sea necesario. Se puede activar desde <code>TestBindings</code>.</p>
+<hr />
+<h2 id="10-la-superstructure-compositesubsystem">10. La Superstructure — CompositeSubsystem</h2>
+<p>La <code>Superstructure</code> es el unico punto de entrada para comandos que involucran multiples modulos. Ningun binding llama directamente a <code>turret.setControl()</code> para un disparo — todo pasa por la Superstructure, que coordina los movimientos paralelos y secuenciales.</p>
+<h3 id="comandos-compuestos-principales">Comandos compuestos principales</h3>
+<p><strong><code>shoot(turretAngle, armAngle, shooterRPM)</code></strong> — Disparo a posicion fija en 2 fases:</p>
+<pre><code class="language-java">public Command shoot(double turretAngle, double armAngle, double shooterRPM) {
+    return Commands.sequence(
+        // Fase 1: Posicionar todo en paralelo, esperar a que los flywheels lleguen a RPM
+        Commands.parallel(
+            flywheelShooter.runRequest(() -&gt; FlyWheelRequestFactory.setRPM().toRPM(shooterRPM)...),
+            turret.setControl(() -&gt; TurretRequestFactory.position().withTargetAngle(turretAngle)),
+            arm.setControl(() -&gt; ArmRequestFactory.setAngle().withAngle(armAngle)...))
+        .until(() -&gt; flywheelShooter.isAtTarget(Constants.FLYWHEEL_TOLERANCE)),
+
+        // Fase 2: Cuando los flywheels estan listos, activar indexer e intake
+        Commands.parallel(
+            index.setControl(() -&gt; IndexerRequestFactory.moveVoltage().withRollers(12).withIndex(12)),
+            intakeWheels.setControl(() -&gt; FlyWheelRequestFactory.moveVoltage().withVolts(-5))));
+}
+</code></pre>
+<p><strong><code>shootOnTheMove(target, armRequest, shooterRequest, voltIndex)</code></strong> — Disparo dinamico mientras el robot se mueve, usando <code>LockOnTarget</code> con feed forward de velocidad angular.</p>
+<p><strong><code>eatCommand()</code></strong> — Activa los intake wheels a -5V y el indexer a 8V de rollers, en paralelo.</p>
+<p><strong><code>clearFuel()</code></strong> — Expulsa el fuel con secuencias inversas (indexer -12V por 1.5s, luego +12V por 1.5s, repetido).</p>
+<p><strong><code>getVirtualTarget()</code></strong> — Calcula donde apuntar compensando el movimiento del robot:</p>
+<pre><code class="language-java">// Proyecta la pose del robot 30ms en el futuro
+Pose2d futureRobotPose = robotPose.exp(new Twist2d(vx*0.03, vy*0.03, omega*0.03));
+
+// Itera 20 veces para refinar el tiempo de vuelo del fuel
+for (int i = 0; i &lt; 20; i++) {
+    virtualTarget = realHubLocation.minus(robotVelVector.times(timeOfFlight));
+    timeOfFlight = distanceToVirtualTarget / NOMINAL_FUEL_VELOCITY_MPS; // 18 m/s
+}
+</code></pre>
+<p>El <code>@Tunable</code> en <code>RPMTest</code> y <code>AngleTest</code> permite ajustar estos valores en tiempo real desde ForgeMini sin recompilar.</p>
+<hr />
+<h2 id="11-sistema-de-autonomia-pathplanner">11. Sistema de Autonomia (PathPlanner)</h2>
+<p>La autonomia usa PathPlanner para rutas precalculadas y <code>NamedCommands</code> para conectar eventos de la ruta con comandos de la Superstructure.</p>
+<h3 id="rutas-disponibles">Rutas disponibles</h3>
+<table>
+<thead>
+<tr>
+<th>Nombre en PathPlanner</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EatPost-auto</code></td>
+<td>Comer y disparar desde el post (opcion por defecto)</td>
+</tr>
+<tr>
+<td><code>DepotAuto</code></td>
+<td>Ruta desde el deposito</td>
+</tr>
+<tr>
+<td><code>BotBusters</code></td>
+<td>Ruta de busters por abajo</td>
+</tr>
+<tr>
+<td><code>TestRed</code></td>
+<td>Ruta de prueba lado rojo</td>
+</tr>
+<tr>
+<td><code>TestBlue</code></td>
+<td>Ruta de prueba lado azul</td>
+</tr>
+<tr>
+<td><code>FlipBusters</code></td>
+<td>Busters espejados</td>
+</tr>
+<tr>
+<td><code>FlipEatPostAuto</code></td>
+<td>Post espejado</td>
+</tr>
+</tbody>
+</table>
+<p>La seleccion se hace desde el SmartDashboard antes del partido con un <code>SendableChooser</code>:</p>
+<pre><code class="language-java">chooser.setDefaultOption(&quot;Post&quot;, bumpPost);
+chooser.addOption(&quot;DepotAuto&quot;, depotBusters);
+// ...
+SmartDashboard.putData(&quot;AutoSelector&quot;, chooser);
+</code></pre>
+<h3 id="comandos-nombrados-registrados">Comandos nombrados registrados</h3>
+<p>PathPlanner dispara estos comandos durante la ejecucion de la ruta cuando encuentra el marcador con ese nombre:</p>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Lo que hace</th>
+<th>Timeout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"Angle-&gt;Eat_4.5"</code></td>
+<td>Baja intake a -140° y activa wheels de intake</td>
+<td>4.5 s</td>
+</tr>
+<tr>
+<td><code>"JustAngle"</code></td>
+<td>Solo baja el intake a -140°</td>
+<td>sin timeout</td>
+</tr>
+<tr>
+<td><code>"Eat_5"</code></td>
+<td>Activa wheels de intake a -10V</td>
+<td>5 s</td>
+</tr>
+<tr>
+<td><code>"Eat_3.5"</code></td>
+<td>Activa wheels de intake a -10V</td>
+<td>3.5 s</td>
+</tr>
+<tr>
+<td><code>"Shoot_6"</code></td>
+<td><code>shootAuto()</code> — disparo con interpolacion dinamica</td>
+<td>6 s</td>
+</tr>
+<tr>
+<td><code>"Shoot_10"</code></td>
+<td>Mismo disparo</td>
+<td>10 s</td>
+</tr>
+<tr>
+<td><code>"Shoot_13"</code></td>
+<td>Mismo disparo</td>
+<td>12 s</td>
+</tr>
+<tr>
+<td><code>"IntakeUp"</code></td>
+<td>Sube el intake a -10°</td>
+<td>sin timeout</td>
+</tr>
+</tbody>
+</table>
+<p>El <code>shootAuto()</code> dispara con el turret bloqueado al hub virtual (compensacion de movimiento) usando los mapas de interpolacion para el angulo del brazo y las RPM, luego dispara en sentido opuesto 0.8 s, y repite.</p>
+<hr />
+<h2 id="12-telemetria-y-visualizacion">12. Telemetria y Visualizacion</h2>
+<h3 id="sistema-de-telemetria-por-modulo-turrettelemetry">Sistema de Telemetria por modulo (TurretTelemetry)</h3>
+<p>Cada <code>ModularSubsystem</code> tiene una clase <code>Telemetry</code> interna que define exactamente que se publica y como. El framework llama a <code>telemeterize()</code> cada ciclo:</p>
+<pre><code class="language-java">public static class TurretTelemetry extends Telemetry&lt;TurretInputs&gt; {
+
+    @Override
+    public void telemeterize(TurretInputs data, ActionStatus lastStatus) {
+        String table = KeyManager.TURRET_KEY;  // &quot;Turret&quot;
+
+        // Publica datos de hardware al NetworkTable &quot;Turret&quot;
+        NetworkIO.set(table, &quot;AppliedOutput&quot;,   data.appliedVolts);
+        NetworkIO.set(table, &quot;AngleDegrees&quot;,    data.angle.getDegrees());
+        NetworkIO.set(table, &quot;TargetAngleDeg&quot;,  data.targetAngle.getDegrees());
+        NetworkIO.set(table, &quot;VelocityRPS&quot;,     data.velocityRPS);
+        NetworkIO.set(table, &quot;LatencyMS&quot;,       (Timer.getFPGATimestamp() - data.timestamp) * 1000);
+
+        // Publica el status del diagnostico (solo cuando cambia, para no saturar el bus)
+        if (lastStatus != null &amp;&amp; lastStatus.getPayload() != null) {
+            String currentHex = lastStatus.getPayload().colorHex();
+            if (!currentHex.equals(lastSentHex)) {
+                NetworkIO.set(table, &quot;PayloadName&quot;,    table);
+                NetworkIO.set(table, &quot;PayloadMessage&quot;, lastStatus.getPayload().message());
+                NetworkIO.set(table, &quot;PayloadHex&quot;,     currentHex);
+                lastSentHex = currentHex;
+            }
+        }
+    }
+}
+</code></pre>
+<p><code>NetworkIO</code> es de ForgeMini — es un wrapper sobre NetworkTables que gestiona tipos automaticamente y puede configurar actualizacion solo cuando cambia el valor (<code>onChange</code>).</p>
+<h3 id="nodes-de-advantagescope">Nodes de AdvantageScope</h3>
+<p>Los <code>Node</code> son publicadores periodicos para AdvantageScope. Cada uno combina multiples fuentes de datos en un mensaje estructurado y lo publica al NetworkTable correspondiente.</p>
+<p><strong><code>VisualizerNode</code></strong> — Modelo 3D del robot en AdvantageScope:</p>
+<pre><code class="language-java">// Publica la pose 3D de cada componente movil
+NetworkIO.set(tableName, &quot;TurretComponent&quot;, turretPose3d); // rotacion de la torreta
+NetworkIO.set(tableName, &quot;HoodComponent&quot;,   hoodPose3d);   // angulo del brazo
+NetworkIO.set(tableName, &quot;IntakeComponent&quot;, intakePose3d); // posicion del intake
+</code></pre>
+<p>AdvantageScope interpreta estos <code>Pose3d</code> para animar el modelo CAD del robot en tiempo real, lo que permite ver visualmente si los angulos son correctos sin mirar el robot fisico.</p>
+<p><strong><code>TrajectoryNode</code></strong> — Muestra la trayectoria de PathPlanner siendo seguida en tiempo real.</p>
+<p><strong><code>GamePieceNode</code></strong> — Muestra la posicion de los game pieces (fuel) en el campo.</p>
+<h3 id="segnales-tunable-y-signal">Segnales Tunable y Signal</h3>
+<p><code>@Tunable</code> permite modificar un campo desde el dashboard en tiempo real:</p>
+<pre><code class="language-java">@Tunable public double RPMTest = -3500;
+@Tunable public double AngleTest = -20;
+</code></pre>
+<p><code>@Signal</code> publica el valor de un metodo al NetworkTable, solo cuando cambia:</p>
+<pre><code class="language-java">@Signal(key = &quot;RPM&quot;, onChange = true)
+public double getRPM() { return RPMTest; }
+</code></pre>
+<h3 id="claves-de-networktables-keymanager">Claves de NetworkTables (KeyManager)</h3>
+<p>Todas las claves de NetworkTables estan centralizadas en <code>KeyManager.java</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Clave</th>
+<th>Tabla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TURRET_KEY</code></td>
+<td><code>"Turret"</code></td>
+</tr>
+<tr>
+<td><code>ARM_KEY</code></td>
+<td><code>"Arm"</code></td>
+</tr>
+<tr>
+<td><code>INTAKE_KEY</code></td>
+<td><code>"Intake"</code></td>
+</tr>
+<tr>
+<td><code>INDEX_KEY</code></td>
+<td><code>"Indexer"</code></td>
+</tr>
+<tr>
+<td><code>FLYWHEEL_OUTAKE_KEY</code></td>
+<td><code>"FlywheelShooter"</code></td>
+</tr>
+<tr>
+<td><code>FLYWHEEL_INTAKE_KEY</code></td>
+<td><code>"FlywheelIntake"</code></td>
+</tr>
+<tr>
+<td><code>CLIMBER_KEY</code></td>
+<td><code>"Climber"</code></td>
+</tr>
+<tr>
+<td><code>SUPERSTRUCTURE_KEY</code></td>
+<td><code>"Superstructure"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-diagnosticos-y-codigos-de-estado-led">13. Diagnosticos y Codigos de Estado LED</h2>
+<p>Cada Request retorna un <code>ActionStatus</code> con un <code>StatusCode</code>. El MARS Framework usa ese codigo para dos cosas: publicar el estado al dashboard (texto + color hex) y, si hay un LED conectado, controlar el patron de luz.</p>
+<h3 id="estructura-de-un-statuscode">Estructura de un StatusCode</h3>
+<pre><code class="language-java">// TurretCode.java
+public enum TurretCode implements StatusCode {
+    IDLE    (Severity.OK,      DiagnosticPattern.solid(Color.kDarkGreen)),
+    LOCKED  (Severity.OK,      DiagnosticPattern.solid(Color.kFirstBlue)),
+    TRACKING(Severity.WARNING, DiagnosticPattern.solid(Color.kYellow)),
+    MANUAL_CONTROL  (Severity.WARNING, DiagnosticPattern.solid(Color.kBrown)),
+    MANUAL_OVERRIDE (Severity.WARNING, DiagnosticPattern.solid(Color.kPurple)),
+    RESET   (Severity.OK,      DiagnosticPattern.solid(Color.kDarkSalmon));
+    // ...
+}
+</code></pre>
+<p>Cada codigo tiene:
+- Una <strong>severidad</strong> (<code>OK</code>, <code>WARNING</code>, <code>ERROR</code>) para filtrar alertas criticas
+- Un <strong>patron visual</strong> (<code>DiagnosticPattern.solid(Color)</code>) que define el color LED</p>
+<h3 id="tabla-de-codigos-de-todos-los-modulos">Tabla de codigos de todos los modulos</h3>
+<p><strong>Turret:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Codigo</th>
+<th>Severidad</th>
+<th>Color LED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IDLE</code></td>
+<td>OK</td>
+<td>Verde oscuro</td>
+</tr>
+<tr>
+<td><code>LOCKED</code></td>
+<td>OK</td>
+<td>Azul FRC</td>
+</tr>
+<tr>
+<td><code>TRACKING</code></td>
+<td>WARNING</td>
+<td>Amarillo</td>
+</tr>
+<tr>
+<td><code>MANUAL_CONTROL</code></td>
+<td>WARNING</td>
+<td>Marron</td>
+</tr>
+<tr>
+<td><code>MANUAL_OVERRIDE</code></td>
+<td>WARNING</td>
+<td>Morado</td>
+</tr>
+<tr>
+<td><code>RESET</code></td>
+<td>OK</td>
+<td>Salmon</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arm:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Codigo</th>
+<th>Severidad</th>
+<th>Color LED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IDLE</code></td>
+<td>OK</td>
+<td>Verde oscuro</td>
+</tr>
+<tr>
+<td><code>ON_TARGET</code></td>
+<td>OK</td>
+<td>Azul FRC</td>
+</tr>
+<tr>
+<td><code>MOVING_TO_ANGLE</code></td>
+<td>WARNING</td>
+<td>Amarillo</td>
+</tr>
+<tr>
+<td><code>MANUAL_CONTROL</code></td>
+<td>WARNING</td>
+<td>Marron</td>
+</tr>
+<tr>
+<td><code>MANUAL_OVERRIDE</code></td>
+<td>WARNING</td>
+<td>Morado</td>
+</tr>
+<tr>
+<td><code>OUT_OF_RANGE</code></td>
+<td>ERROR</td>
+<td>Naranja</td>
+</tr>
+</tbody>
+</table>
+<p>Los demas modulos (Intake, Indexer, FlyWheels, Climber) siguen el mismo patron — <code>IDLE</code>=verde, <code>ON_TARGET</code>/<code>LOCKED</code>=azul, en movimiento=amarillo, error=naranja/rojo.</p>
+<p>La telemetria publica el color hex del status actual al NetworkTable del modulo (<code>PayloadHex</code>). Desde AdvantageScope se puede ver el estado de cada modulo con su color correspondiente.</p>
+<hr />
+<h2 id="14-features-instaladas">14. Features Instaladas</h2>
+<p>Las features son paquetes de codigo reutilizables del ecosistema MARS. Se instalan via <code>build.gradle</code> y viven en <code>workspace/features/</code>.</p>
+<h3 id="features-activas-en-marsiano">Features activas en MARSIANO</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Version</th>
+<th>Funcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MarsProcessor</code></td>
+<td>1.0.5</td>
+<td>Genera <code>@Fallback</code> (IO vacia) y <code>@RequestFactory</code> (factory estatica) en tiempo de compilacion con annotation processors de Java</td>
+</tr>
+<tr>
+<td><code>UnitProcessor</code></td>
+<td>1.0.3</td>
+<td>Genera documentacion de unidades tipadas a partir de <code>@Unit</code> para logging y telemetria</td>
+</tr>
+<tr>
+<td><code>DictionaryFeature</code></td>
+<td>1.0.0</td>
+<td>Centraliza los strings de logging (<code>CommonTables.ANGLE_KEY</code>, <code>Terminology.RPS</code>, etc.) para evitar typos en las claves de NetworkTables</td>
+</tr>
+<tr>
+<td><code>MARSPoseFinderCTRESwerve</code></td>
+<td>1.0.0</td>
+<td>Agrega <code>getPoseFinder()</code> al <code>CommandSwerveDrivetrain</code> — permite navegar autonomamente a cualquier <code>Pose2d</code> desde un binding con una sola linea</td>
+</tr>
+</tbody>
+</table>
+<h3 id="como-funcionan-los-annotation-processors">Como funcionan los annotation processors</h3>
+<p><code>MarsProcessor</code> y <code>UnitProcessor</code> son Java annotation processors que corren <strong>en tiempo de compilacion</strong> (no en el robot). Cuando ves <code>@Fallback</code> en una interfaz IO, al compilar el proyecto Gradle genera automaticamente el archivo <code>TurretIOFallback.java</code> en el directorio de build. No hay que escribir ni mantener esas clases manualmente.</p>
+<pre><code>Compilacion:
+  TurretIO.java (@Fallback) ──► MarsProcessor ──► genera TurretIOFallback.java
+  TurretRequest.java (@RequestFactory) ──► genera TurretRequestFactory.java
+</code></pre>
+<h3 id="como-instalar-una-nueva-feature">Como instalar una nueva feature</h3>
+<p>Desde la extension <code>mars-framework</code> de VS Code, el comando <code>MARS: Install Feature</code> muestra el marketplace y agrega automaticamente la dependencia al <code>build.gradle</code>. Para instalacion manual, el <code>build.gradle</code> incluye la feature como dependencia de Maven:</p>
+<pre><code class="language-groovy">// build.gradle (fragmento)
+dependencies {
+    implementation &quot;com.stzteam.features:MARSPoseFinderCTRESwerve:1.0.0&quot;
+    annotationProcessor &quot;com.stzteam.features:MarsProcessor:1.0.5&quot;
+    annotationProcessor &quot;com.stzteam.features:UnitProcessor:1.0.3&quot;
+}
+</code></pre>
+<hr />
+<h2 id="resumen-de-arquitectura">Resumen de Arquitectura</h2>
+<pre><code>Main.java
+  └─ Robot.java (TimedRobot — ciclo 20ms)
+      └─ RobotContainer.java
+          ├─ Manifest.java ──── Feature Flags + Injector (REAL/SIM/Fallback)
+          ├─ Constants.java ─── Tolerancias, HUB location, mapas de interpolacion
+          ├─ CommandSwerveDrivetrain ─── CTRE Phoenix 6, PoseFinder (PathPlanner)
+          ├─ Superstructure (CompositeSubsystem)
+          │   ├─ Turret ──── SparkMax  | IO → Request → ActionStatus → LED
+          │   ├─ Arm ──────── Kraken   | IO → Request → ActionStatus → LED
+          │   ├─ FlyWheel x2 ─ Kraken  | IO → Request → ActionStatus → LED
+          │   ├─ Intake ───── Kraken   | IO → Request → ActionStatus → LED
+          │   ├─ Indexer ──── SparkMax | IO → Request → ActionStatus → LED
+          │   └─ Climber ──── Kraken   | IO → Request → ActionStatus → LED
+          ├─ DriverBindings (Xbox Puerto 0)
+          ├─ OperatorBindings (Xbox Puerto 1)
+          ├─ AutoBindings (PathPlanner + NamedCommands)
+          └─ AdvantageScope Nodes (Visualizer, Trajectory, GamePiece)
+</code></pre>
+<p>Cada modulo sigue el mismo flujo cada ciclo de 20ms:</p>
+<pre><code>IO.updateInputs(inputs)      ← leer sensores del hardware
+absolutePeriodic(inputs)     ← inyectar datos externos (pose, speeds)
+Request.apply(inputs, actor) ← ejecutar la orden activa
+Telemetry.telemeterize(...)  ← publicar al NetworkTable
+Node.processInformation()    ← publicar a AdvantageScope
+</code></pre>
+<hr />
+<p><em>Documento completado. Ver tambien: <a href="GUIA_INICIO_MARS.md">GUIA_INICIO_MARS.md</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
